@@ -1,0 +1,26 @@
+<!-- update_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+</head>
+<body>
+    <h1>Update Student</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_name">Name:</label>
+        {{ form.name }}
+        <br>
+        <label for="id_email">Email:</label>
+        {{ form.email }}
+        <br>
+        <label for="id_city">City:</label>
+        {{ form.city }}
+        <br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

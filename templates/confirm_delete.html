@@ -1,0 +1,21 @@
+<!-- confirm_delete.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Deletion</title>
+</head>
+<body>
+    <h1>Confirm Deletion</h1>
+    <p>Are you sure you want to delete "{{ object.name }}"?</p>
+    <form method="post">
+    {% csrf_token %}
+    <div style="display: inline-block;">
+        <button type="submit">Yes, Delete</button>
+        <a href="{% url 'StudentListView' %}"><button type="button">No, Cancel</button></a>
+    </div>
+</form>
+</body>
+</html>
